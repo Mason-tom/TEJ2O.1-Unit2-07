@@ -13,19 +13,14 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(cookies)
 })
 
+// Reset everything when Button B is pressed
 input.onButtonPressed(Button.B, function () {
-    if (cookies >= 10) {
-        cookies = cookies - 10
-        cookiesPerClick = cookiesPerClick + 1
-        basic.showString("UP")
-    } else {
-        basic.showString("NO")
-    }
+    cookies = 0
+    cookiesPerClick = 1
+    basic.showNumber(0)
+    basic.clearScreen()
 })
 
 input.onButtonPressed(Button.AB, function () {
     basic.showNumber(cookies)
 })
-
-basic.showString("GO")
-
